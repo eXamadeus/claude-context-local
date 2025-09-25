@@ -1,6 +1,6 @@
 # Claude-Context Local
 
-This is a repo that holds the code to run claude-context locally.
+This is a repo that holds the code to run [claude-context](https://github.com/zilliztech/claude-context) locally.
 
 Requirements:
  - [Ollama](https://ollama.com/download)

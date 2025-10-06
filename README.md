@@ -6,6 +6,12 @@ Requirements:
  - [Ollama](https://ollama.com/download)
  - [Docker](https://www.docker.com/)
 
+Pull in the embedding model:
+
+```bash
+ollama pull nomic-embed-text # or whatever embedding model you want
+```
+
 Once you have those installed and running, you can start the containers:
 
 ```bash
@@ -18,7 +24,7 @@ then add the MCP server to you claude code settings:
 claude mcp add claude-context \
   --env EMBEDDING_PROVIDER=Ollama \
   --env OLLAMA_HOST=http://127.0.0.1:11434 \
-  --env OLLAMA_MODEL=nomic-embed-text \
+  --env OLLAMA_MODEL=nomic-embed-text \ # use the model you pulled earlier
   --env MILVUS_ADDRESS=127.0.0.1:19530 \
   -- npx @zilliz/claude-context-mcp@latest
 ```
